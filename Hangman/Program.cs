@@ -4,21 +4,30 @@
     {
         static void Main(string[] args)
         {
-            Console.Write("Welcome to hangman!\n" +
-                "First player type in a secret word, the other player please look away!\n" +
-                "Secret word: ");
+            Console.Write("   Welcome to hangman!\n\n" +
+                "First player type in a secret word,\n" +
+                "the other player "); 
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("please look away!\n\n");
+            Console.ResetColor();
+
+            Console.Write("Secret word: ");
             
             string secretWord = Console.ReadLine();
             List<char> guessedLetters = new List<char>();
             int wrongGuesses = 0;
 
             Console.Clear();
+            Console.WriteLine("     \n" +
+                            "     \n" +
+                            "     \n" +
+                            "_____\n" +
+                            "\nCurrent word: \n");
 
             if (Utility.StringWithin1and10(secretWord))
             {
                 while (true)
                 {
-                    Console.WriteLine();
                     Console.WriteLine("Guess a letter: ");
                     char guess = Console.ReadLine()[0];
 

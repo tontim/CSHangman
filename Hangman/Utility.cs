@@ -83,10 +83,19 @@ namespace Hangman
                     break;
 
                 default:
-                    Console.WriteLine(",____\n" +
-                        " |´ o - Oh no!\n" +
-                        " | ´|`\n" +
-                        "_|__^\n");
+                    Console.Write(",____\n");
+                    Console.Write(" |´ ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("o - Oh no!\n");
+                    Console.ResetColor();
+                    Console.Write(" | ");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("´|`\n");
+                    Console.ResetColor();
+                    Console.Write("_|__");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("^\n");
+                    Console.ResetColor();
                     break;
             }
         }
