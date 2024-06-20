@@ -94,7 +94,7 @@ namespace Hangman
                     Console.ResetColor();
                     Console.Write("_|__");
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.Write("^\n");
+                    Console.Write("^\n\n");
                     Console.ResetColor();
                     break;
             }
